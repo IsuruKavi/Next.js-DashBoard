@@ -43,6 +43,7 @@ export async function fetchLatestInvoices() {
       ...invoice,
       amount: formatCurrency(invoice.amount),
     }));
+    console.log("invoice",latestInvoices)
     return latestInvoices;
   } catch (error) {
     console.error('Database Error:', error);
